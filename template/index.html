@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProBelajar Lemmatizer</title>
+    <link rel="icon" type="image/ico" href="static\images\favicon.ico">
+    <link rel="stylesheet" href="static\css\style.css">
+</head>
+<body>
+    <header>
+      <div><img src="static\images\logo.PNG" alt="This is a Logo"></div>
+      <h2>Jom Belajar Bahasa Melayu dengan Lemmatizer!</h2>
+    </header>
+    <h1>Bahasa Rojak Malay Language Lemmatizer Web App</h1>
+    <p>
+      This is Web App to lemmatize Bahasa Rojak. Given a sentence of short form Malay language, it will show you the proper sentence.
+    </p>
+    <br>
+    <div id="btn">
+      <button><a href="{{url_for('update')}}">Update the Lemmatizer!</a></button>
+    </div>
+    <div id="contents">
+      <form action="/" method="post" enctype="multipart/form-data">
+        <h3>Please type a sentence to lemmatize it</h3>
+        <input id= "first" type="text" name="malay_sentence" size="50">
+        <br>     
+          <div>
+            <button type="submit">Submit & Read</button>
+          </div>
+        </div>
+        
+      </form>
+      <div id="answer">
+        {% if prediction %}
+          <h3>The proper sentence is: </h3>
+          <p>{{prediction}}</p>
+        {% endif %}
+      </div>
+    </div>
+    <br><br>
+    <footer>
+      <h4>Terima kasih for using this Web App</h4>
+    </footer>
+</body>
+</html>

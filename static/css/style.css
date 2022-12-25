@@ -1,0 +1,110 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgb(225, 224, 244);
+}
+header,footer{
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(195, 204, 247);
+}
+h1{
+    text-align: center;
+    font-size: 35px;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 0.3em;
+    font-family: cursive;
+}
+p{
+    text-align: center;
+}
+
+#first{
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    border: solid black 1px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+#second{
+    overflow: hidden;
+}
+
+#second>input{
+    width: 50%;
+    height: 15px;
+    border-radius: 10px;
+    border: solid black 1px;
+    font-size: 15px;
+    margin-right: 20%;
+    padding-left: 10px;
+    float: right;
+    clear: both;
+}
+
+button{
+    background-color: rgb(180, 191, 243);
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+button:hover{
+    background-color: rgb(145, 161, 240);
+    font-weight: bold;
+}
+img{
+    width: 120px;
+    height: 130px;
+    margin: 50px;
+    border: solid black 5px;
+}
+#contents{
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+    padding-right: 80;
+    background-color: rgb(231, 231, 231);
+    box-shadow: 10px 10px rgb(195, 204, 247);
+    font-size: 20px;
+}
+#btn{
+    text-align: center;
+}
+#btn>button>a{
+    text-decoration: none;
+    color: black;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+#answer{
+    text-align: center;
+}
+footer>h4{
+    font-size: 30px;
+}

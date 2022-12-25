@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProBelajar Lemmatizer</title>
+    <link rel="icon" type="image/ico" href="static\images\favicon.ico">
+    <link rel="stylesheet" href="static\css\style.css">
+</head>
+<body>
+    <header>
+      <div><img src="static\images\logo.PNG" alt="This is a Logo"></div>
+      <h2>Update unknown words</h2>
+    </header>
+    <h1>Bahasa Rojak Malay Language Lemmatizer Web App</h1>
+    <p>
+      Fill in the form below to update the unknown words. Leave the field blank if you are not sure about the word.
+    </p>
+    <br>
+    <div id="btn">
+      <button><a href="{{url_for('main')}}">Back to Homepage</a></button>
+    </div>
+    <div id="contents">
+      {% if unknown %}
+      <form id= "second" action="/update" method="post" enctype="multipart/form-data">
+        {% for word in unknown %}
+        <label>{{ word }}</label>
+        <label> : </label>
+        <input type="text" name= "{{ word }}" size="30" ali>
+        <br>
+        {% endfor %}
+        <br>     
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+      </form>
+      {% else %}
+        <h3>There are no words to be updated</h3>
+      {% endif %}
+      <div id="answer">
+        {% if respond %}
+          <h3>{{prediction}}</h3>
+        {% endif %}
+      </div>
+    </div>
+    <br><br>
+    <footer>
+      <h4>Terima kasih for using this Web App</h4>
+    </footer>
+</body>
+</html>
