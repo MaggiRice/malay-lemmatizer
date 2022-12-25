@@ -124,4 +124,4 @@ def update():
     return render_template("./update.html", unknown = unknown)
 
 if __name__ =='__main__':
-	app.run(debug = True)
+	app.run(debug = False)
